@@ -3,6 +3,7 @@ var numAgentes = document.querySelector("#players").value
 var duelistas = ["Raze", "Phoenix", "Jett", "Reyna", "Yoru", "Neon", "Iso"]
 var controladores = ["Brimstone", "Viper", "Omen", "Astra", "Harbor"]
 var iniciadores = ["Sova", "Breach", "Skye", "KAY/O", "Gekko", "Fade"]
+var sentinelas = ["Cypher", "Sage", "Killjoy", "Deadlock", "Chamber"]
 
 function verificarNum(numAgentes) {
   if (!/[0-9]/.test(numAgentes)) {
