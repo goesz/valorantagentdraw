@@ -1,5 +1,8 @@
-let numAgentes = document.getElementById("players").value
-let agentes = ["Brimstone", "Viper", "Omen", "Raze", "Cypher", "Sova", "Sage", "Phoenix", "Jett", "Breach", "Killjoy", "Reyna", "Skye", "Yoru", "Astra", "KAY/O", "Deadlock", "Iso", "Gekko", "Chamber", "Neon", "Fade", "Harbor"]
+var agentes = ["Brimstone", "Viper", "Omen", "Raze", "Cypher", "Sova", "Sage", "Phoenix", "Jett", "Breach", "Killjoy", "Reyna", "Skye", "Yoru", "Astra", "KAY/O", "Deadlock", "Iso", "Gekko", "Chamber", "Neon", "Fade", "Harbor"]
+var numAgentes = document.querySelector("#players").value
+var duelistas = ["Raze", "Phoenix", "Jett", "Reyna", "Yoru", "Neon", "Iso"]
+var controladores = ["Brimstone", "Viper", "Omen", "Astra", "Harbor"]
+var iniciadores = ["Sova", "Breach", "Skye", "KAY/O", "Gekko", "Fade"]
 
 function verificarNum(numAgentes) {
   if (!/[0-9]/.test(numAgentes)) {
@@ -13,7 +16,7 @@ function verificarNum(numAgentes) {
 
       if (verificarNum(numJogadores)) {
         if (numJogadores > agentes.length) {
-          document.getElementById("escrever").innerHTML = "Não há agentes suficientes para o número de jogadores que você digitou.";
+          document.getElementById("escrever").innerHTML = "Não há agentes suficientes para o número de jogadores.";
           return;
         }
 
