@@ -1,27 +1,73 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
   font-size: 13px;
   background-image: linear-gradient(45deg, #FE4A49, #902D41);
   height: 100vh;
   width: 100vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-div {
-        color: white;
-        width: 300px;
-        padding: 20px;
-        margin: 0 auto;
-        border-radius: 5px;
+.container {
+  color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 8px black;
+  background-image: linear-gradient(140deg, rgba(30, 30, 36, 0.3), rgba(68, 56, 80, 0.3));
+  box-shadow: 0 0 30px red;
+}
+
+h1 {
+  width: 300px;
+  margin-left: 3%;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-right: 75%;
+  margin-bottom: 10px;
+  color: white;
+}
+
+#players {
+  width: 260px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#a2 {
+  margin-left: 10px;
+  text-shadow: 2px 2px 4px black;
+  background-color: #FE4A49;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-top: -30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#a2:hover {
+  background-color: #E3170A;
 }
 
 #escrever {
-        color: black;
-        background-color: white;
-        margin-top: 20px;
-        width: 260px;
-}
-
-input {
-    border-radius: 5px;
-    border: 1px solid white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px black;
+  background-color: white;
+  margin-top: 20px;
+  width: 260px;
+  border: 1px solid white;
 }
