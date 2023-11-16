@@ -1,29 +1,23 @@
-var agentes = ["Brimstone", "Viper", "Omen", "Raze", "Cypher", "Sova", "Sage", "Phoenix", "Jett", "Breach", "Killjoy", "Reyna", "Skye", "Yoru", "Astra", "KAY/O", "Deadlock", "Iso", "Gekko", "Chamber", "Neon", "Fade", "Harbor"];
-var duelistas = ["Raze", "Phoenix", "Jett", "Reyna", "Yoru", "Neon", "Iso"];
-var controladores = ["Brimstone", "Viper", "Omen", "Astra", "Harbor"];
-var iniciadores = ["Sova", "Breach", "Skye", "KAY/O", "Gekko", "Fade"];
-var sentinelas = ["Cypher", "Sage", "Killjoy", "Deadlock", "Chamber"];
+const agentes = ["Brimstone", "Viper", "Omen", "Raze", "Cypher", "Sova", "Sage", "Phoenix", "Jett", "Breach", "Killjoy", "Reyna", "Skye", "Yoru", "Astra", "KAY/O", "Deadlock", "Iso", "Gekko", "Chamber", "Neon", "Fade", "Harbor"];
+const duelistas = ["Raze", "Phoenix", "Jett", "Reyna", "Yoru", "Neon", "Iso"];
+const controladores = ["Brimstone", "Viper", "Omen", "Astra", "Harbor"];
+const iniciadores = ["Sova", "Breach", "Skye", "KAY/O", "Gekko", "Fade"];
+const sentinelas = ["Cypher", "Sage", "Killjoy", "Deadlock", "Chamber"];
 
 function verificarNum(num) {
   return !isNaN(num) && num > 0;
 }
 
-function playerCount(numPlayers) {
-  let count = 0;
-  for (let i = 0; i < numPlayers; i++) {
-    count++;
-  }
-  return count;
-}
-
 function sortearAgente() {
   let numJogadores = document.getElementById("players").value;
+  let message = document.getElementById("escrever");
+  
+  message.innerHTML = "";
 
   if (verificarNum(numJogadores)) {
- playerCount(numJogadores);
 
     if (numJogadores > agentes.length) {
-      document.getElementById("escrever").innerHTML = "Não há agentes suficientes para o número de jogadores.";
+      message.innerHTML = "Não há agentes suficientes para o número de jogadores.";
       return;
     }
 
@@ -36,8 +30,9 @@ function sortearAgente() {
     }
 
     let resultadoHTML = agentesSorteados.map(obj => `Player ${obj.jogador}: ${obj.agente}`).join(',<br>');
-    document.getElementById("escrever").innerHTML = `Agentes Sorteados:<br><b>${resultadoHTML}</b>.`;
+    message.innerHTML = `Agentes Sorteados:<br><b>${resultadoHTML}</b>.`;
   } else {
-    document.getElementById("escrever").innerHTML = "Digite um número válido de jogadores.";
+    message.innerHTML = "Digite um número válido de jogadores.";
+	return;
   }
 }
