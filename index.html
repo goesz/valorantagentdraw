@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sortear Agentes</title>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Sorteio de Agentes</h1>
+        <div class="label">
+
         <form action="">
-            <p>Digite a quantidade de players</p>
             <label for="">Players: </label>
-            <input type="text" id="players"><br><br>
-            <input type="button"value="Sortear" onclick="sortAgent()" id="a2">
+            <input type="text" id="players"placeholder="Digite a quantidade de jogadores"><br><br>
+            <input type="button"value="Sortear" onclick="sortearAgente()" id="a2">
+        </div>
           </form>
           <div id="escrever"></div>
     </div>
